@@ -1,10 +1,8 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
+ * This class represents a picture of steve taking a selfie on his phone
+ * outside his house on a beutiful sunny day.
  *
- * This class was written as an early example for teaching Java with BlueJ.
+ * The class was written to create steve and his world
  * 
  * @author  Saba Machavariani
  * @version 2026.02.11
@@ -16,6 +14,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Person steve;
+    private Square phone;
     private boolean drawn;
 
     /**
@@ -28,6 +27,7 @@ public class Picture
         roof = new Triangle();  
         sun = new Circle();
         steve = new Person();
+        phone = new Square();
         drawn = false;
     }
 
@@ -54,9 +54,14 @@ public class Picture
             roof.makeVisible();
             
             steve.changeSize(60,180);
-            steve.moveHorizontal(20);
-            steve.moveVertical(-60);
+            steve.moveHorizontal(70);
+            steve.moveVertical(50);
             steve.makeVisible();
+            
+            phone.moveHorizontal(110);
+            phone.moveVertical(100);
+            phone.changeSize(30);
+            phone.makeVisible();
     
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
@@ -77,6 +82,7 @@ public class Picture
         roof.changeColor("black");
         sun.changeColor("black");
         steve.changeColor("black");
+        phone.changeColor("black");
     }
 
     /**
@@ -88,6 +94,7 @@ public class Picture
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
-        steve.changeColor("purple");
+        steve.changeColor("blue");
+        phone.changeColor("black");
     }
 }
